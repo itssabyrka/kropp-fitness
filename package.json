@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "packageManager": "pnpm@11.18.0",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,13 +17,6 @@
     "stylelint:fix": "stylelint \"**/*.css\" --fix",
     "check": "pnpm lint && pnpm stylelint && pnpm format",
     "prepare": "husky"
-  },
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.18.0",
-      "onFail": "download"
-    }
   },
   "lint-staged": {
     "*.html": [
