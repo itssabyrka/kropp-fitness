@@ -2,30 +2,16 @@
   "name": "kropp-fitness",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "format": "biome format --write .",
-    "lint": "biome lint .",
-    "check": "biome check .",
-    "fix": "biome check --write .",
-    "stylelint": "stylelint \"**/*.css\"",
-    "stylelint:fix": "stylelint \"**/*.css\" --fix"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "biome check --write"
-    ],
-    "*.{css,scss}": [
-      "stylelint --fix",
-      "biome format --write"
-    ],
-    "*.{html,json}": [
-      "biome format --write"
-    ]
-  },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "stylelint": "stylelint \"**/*.css\"",
+    "stylelint:fix": "stylelint \"**/*.css\" --fix"
+  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
@@ -33,11 +19,22 @@
       "onFail": "download"
     }
   },
-  "type": "module",
+  "lint-staged": {
+    "*.{html}": [
+      "prettier --write"
+    ],
+    "*.{css,scss}": [
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{js,mjs}": [
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
-    "@biomejs/biome": "2.5.6",
     "husky": "^9.1.7",
     "lint-staged": "^17.2.0",
+    "prettier": "^3.9.6",
     "stylelint": "^17.14.1",
     "stylelint-config-standard": "^40.0.0"
   }
