@@ -8,12 +8,13 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write .",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "stylelint": "stylelint \"**/*.css\"",
     "stylelint:fix": "stylelint \"**/*.css\" --fix",
-    "check": "pnpm lint && pnpm stylelint",
+    "check": "pnpm lint && pnpm stylelint && pnpm format",
     "prepare": "husky"
   },
   "devEngines": {
