@@ -7,7 +7,9 @@
     "format": "biome format --write .",
     "lint": "biome lint .",
     "check": "biome check .",
-    "fix": "biome check --write ."
+    "fix": "biome check --write .",
+    "stylelint": "stylelint \"**/*.css\"",
+    "stylelint:fix": "stylelint \"**/*.css\" --fix"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +23,8 @@
   },
   "type": "module",
   "devDependencies": {
-    "@biomejs/biome": "2.5.6"
+    "@biomejs/biome": "2.5.6",
+    "stylelint": "^17.14.1",
+    "stylelint-config-standard": "^40.0.0"
   }
 }
